@@ -1,0 +1,9 @@
+# 我的学习笔记 - your_member_branch_example
+
+本周有趣的内容:
+- Git基础命令
+- Colab与GitHub集成
+
+本周困难的内容:
+- 合并冲突的解决
+- PAT的设置
