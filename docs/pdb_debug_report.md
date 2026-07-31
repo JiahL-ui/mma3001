@@ -50,6 +50,15 @@ lat_fixed = np.clip(lat, -90.0, 90.0)
 lon_fixed = np.clip(lon, -180.0, 180.0)
 ```
 
+### Before vs After — Plate-Carree Projection Map
+
+![GPS Bug Demo](../data/gps_error_plot.png)
+
+- **Left**: Red dots = buggy version. The point at `lat=90.00000000000001` exceeds the
+  valid $[-90°, 90°]$ range and fails to render correctly (orange ✕ marker).
+- **Right**: Green dots = fixed version using `np.clip()`. All points are safely
+  clamped within the Plate-Carree projection bounds.
+
 See the fixed, consolidated implementation in
 [`tools/gps_plotter.py`](../tools/gps_plotter.py) (`clip_coordinates`
 function).
